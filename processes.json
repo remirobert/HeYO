@@ -1,0 +1,37 @@
+{
+  "apps" : [{
+    "name"      : "API",
+    "script"    : "./api/app.js",
+    "env"  : {
+       "NODE_PORT": "8000"
+     }
+  },
+  {
+    "name"      : "geo-service",
+    "script"    : "./service-geo/app.js",
+    "env"  : {
+       "NODE_PORT": "8001"
+     }
+  },
+  {
+    "name"      : "foursquare-service",
+    "script"    : "./service-foursquare/app.js",
+    "env"  : {
+       "NODE_PORT": "8002"
+     }
+  },
+  {
+    "name"      : "instagram-service",
+    "script"    : "./service-instagram/app.js",
+    "env"  : {
+       "NODE_PORT": "8003"
+     }
+  },
+  {
+    "name"      : "weather-service",
+    "script"    : "./service-weather/app.js",
+    "env"  : {
+       "NODE_PORT": "8004"
+     }
+  }]
+}

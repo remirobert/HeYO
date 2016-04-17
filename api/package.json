@@ -1,0 +1,27 @@
+{
+  "name": "news",
+  "version": "1.0.0",
+  "description": "News app, built with micro service architecture, Node.js",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/remirobert/News-microservice.git"
+  },
+  "author": "= <remirobert33530@gmail.com> (remirobert.github.io)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/remirobert/News-microservice/issues"
+  },
+  "homepage": "https://github.com/remirobert/News-microservice#readme",
+  "dependencies": {
+    "good": "^6.6.0",
+    "good-console": "^5.3.1",
+    "hapi": "^13.3.0",
+    "q": "^1.4.1",
+    "request": "^2.71.0",
+    "socket.io": "^1.4.5"
+  }
+}

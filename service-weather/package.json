@@ -1,0 +1,20 @@
+{
+  "name": "servicegeo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "= <remirobert33530@gmail.com> (remirobert.github.io)",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.13.4",
+    "forecast": "^0.2.1",
+    "good": "^6.6.0",
+    "good-console": "^5.3.1",
+    "hapi": "^13.3.0",
+    "node-foursquare": "^0.3.0",
+    "node-foursquare-venues": "^1.1.0"
+  }
+}

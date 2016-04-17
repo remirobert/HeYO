@@ -1,0 +1,18 @@
+{
+  "name": "servicegeo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "= <remirobert33530@gmail.com> (remirobert.github.io)",
+  "license": "ISC",
+  "dependencies": {
+    "geocoder": "^0.2.2",
+    "good": "^6.6.0",
+    "good-console": "^5.3.1",
+    "hapi": "^13.3.0"
+  }
+}

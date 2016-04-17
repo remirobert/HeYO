@@ -1,0 +1,8 @@
+{
+    "apps": [
+        {
+            "name": "geo-service",
+            "script": "./app.js"
+        }
+    ]
+}

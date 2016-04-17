@@ -1,0 +1,24 @@
+api:
+  build: ./api/
+  ports:
+    - "8000:8000"
+
+geo-service:
+  build: ./service-geo/
+  ports:
+    - "8001:8001"
+
+foursquare-service:
+  build: ./service-foursquare/
+  ports:
+    - "8002:8002"
+
+weather-service:
+  build: ./service-weather/
+  ports:
+    - "8003:8003"
+
+instagram-service:
+  build: ./service-instagram/
+  ports:
+    - "8004:8004"
