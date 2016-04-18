@@ -27,3 +27,10 @@ The project has a **docker-compose.yml** file, to *build* and *run* all the *doc
 ```shell
 docker-compose up
 ```
+
+Or using **pm2** to manage all the applications process.
+
+```shell
+npm install -g pm2
+pm2 start processes.json
+```
