@@ -18,36 +18,21 @@ protocol Cell {
     func configure(data: DataCell)
 }
 
-class DataSource: NSObject, RxTableViewDataSourceType, UITableViewDataSource {
-
-    typealias Element = [DataCell]
+class DataSource: NSObject, UITableViewDataSource {
     
-    var items: Element?
-    
-    func tableView(tableView: UITableView, observedEvent: RxSwift.Event<Element>) {
-        switch observedEvent {
-        case .Next(let value):
-            self.items = value
-            
-            tableView.reloadData()
-            
-        case .Error(let error):
-            print("Error: \(error)")
-            
-        case .Completed:
-            print("Completed")
-        }
-    }
+    var items: [DataCell?]?
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        print("return coun item : \(items?.count ?? 0)")
         return items?.count ?? 0
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as? Cell else {
+        guard let item = items![indexPath.row],
+            let cell = tableView.dequeueReusableCellWithIdentifier(item.identifier, forIndexPath: indexPath) as? Cell else {
             return UITableViewCell()
         }
-        cell.configure(items![indexPath.row])
+        cell.configure(item)
         return cell as! UITableViewCell
     }
 }

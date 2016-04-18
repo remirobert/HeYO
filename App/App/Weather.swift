@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Weather: DataCell {
+struct Weather: DataCell {
     
     var descriptionWeather: String?
     var temp: String?

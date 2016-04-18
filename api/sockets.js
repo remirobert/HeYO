@@ -8,18 +8,18 @@ const requests = [
     query: "geo",
     port: 8001
   },
-  {
-    query: "venues",
-    port: 8002
-  },
+  // {
+  //   query: "venues",
+  //   port: 8002
+  // }
   {
     query: "instagram",
     port: 8003
   },
-  {
-    query: "weather",
-    port: 8004
-  }
+  // {
+  //   query: "weather",
+  //   port: 8004
+  // }
 ]
 
 module.exports = function(io) {
@@ -30,6 +30,8 @@ module.exports = function(io) {
         request.get({url: 'http://127.0.0.1:' + req.port + '/' + req.query,
         qs: {lat: lat, lon: lon}},
         function(error, response, body) {
+          console.log(response)
+          console.log(body);
           if (!error && response.statusCode == 200) {
             fulfill(body);
           }
@@ -46,6 +48,21 @@ module.exports = function(io) {
 
       console.log("lat : " + lat);
       console.log("lon : " + lon);
+
+      socket.emit("geo", "salut");
+
+      // request.get({url: 'http://127.0.0.1:8001/geo',
+      // qs: {lat: lat, lon: lon}},
+      // function(error, response, body) {
+      //   console.log(response)
+      //   console.log(body);
+      //   if (!error && response.statusCode == 200) {
+      //     socket.emit("geo", body);
+      //   }
+      //   else {
+      //     reject(error);
+      //   }
+      // });
 
       requests.forEach(function(req) {
         fetchData(lat, lon, req).then(function(body) {

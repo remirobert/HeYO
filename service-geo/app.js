@@ -7,7 +7,7 @@ const geocoder = require('geocoder');
 // Create a server with a host and port
 const server = new Hapi.Server();
 server.connection({
-    host: '0.0.0.0',
+    host: '127.0.0.1',
     port: process.env.NODE_PORT || 8001
 });
 

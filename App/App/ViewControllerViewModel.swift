@@ -13,12 +13,22 @@ import SocketIOClientSwift
 class ViewControllerViewModel {
 
     private var socket: SocketIOClient
-    private var weather: DataCell?
+    private let disposeBag = DisposeBag()
     
     var models: Variable<[DataCell?]> = Variable([])
+    var weather: Variable<DataCell?> = Variable(nil)
+    
+    
+    func performGeoRequest() {
+        let request = API.Geo(lat: 31.289814, lon: 121.215573)
+        Network.send(request: request).subscribeNext { (response: JSON?) in
+            print("\(response)")
+        }.addDisposableTo(self.disposeBag)
+    }
     
     init() {
-        self.models.value.append(self.weather)
+//        self.performGeoRequest()
+        
         self.socket = SocketIOClient(socketURL: NSURL(string: "http://localhost:8000")!, options: [.ForcePolling(true)])
         
         self.socket.on("connect") { data, ack in
@@ -27,9 +37,11 @@ class ViewControllerViewModel {
         }
         
         self.socket.on("geo") { data, ack in
-            self.weather = Weather(data: data) as? DataCell
+            print("data : \(data)")
+            self.weather.value = Weather(data: data) as? DataCell
         }
         self.socket.on("venues") {data, ack in
+            print("data venues : \(data)")
             //            print("venues : \(data)")
         }
         self.socket.on("instagram") {data, ack in

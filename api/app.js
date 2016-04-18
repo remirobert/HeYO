@@ -6,21 +6,20 @@ const req = require('request');
 
 const server = new Hapi.Server();
 server.connection({
-  host: '0.0.0.0',
+  host: '127.0.0.1',
   port: process.env.NODE_PORT || 8000
 });
 
 const io = require('socket.io')(server.listener);
-
 require('./sockets')(io);
 
 server.route({
-    method: 'GET',
-    path:'/',
+    method: 'POST',
+    path:'/geo',
     handler: function (request, reply) {
 
-      const lat = request.query.lat;
-      const lon = request.query.lon;
+      const lat = request.params.lat;
+      const lon = request.params.lon;
 
       if (!lat || !lon) {
         return reply({
@@ -28,7 +27,7 @@ server.route({
         }).code(404);
       }
 
-      req.get({url: 'http://0.0.0.0:8001/geo',
+      req.get({url: 'http://127.0.0.1:8001/geo',
       qs: {lat: lat, lon: lon}},
       function(error, response, body) {
         if (!error && response.statusCode == 200) {
