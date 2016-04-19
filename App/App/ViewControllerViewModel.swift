@@ -15,16 +15,10 @@ class ViewControllerViewModel {
     private var socket: SocketIOClient
     private let disposeBag = DisposeBag()
     
-    var models: Variable<[DataCell?]> = Variable([])
-    var weather: Variable<DataCell?> = Variable(nil)
-    
-    
-    func performGeoRequest() {
-        let request = API.Geo(lat: 31.289814, lon: 121.215573)
-        Network.send(request: request).subscribeNext { (response: JSON?) in
-            print("\(response)")
-        }.addDisposableTo(self.disposeBag)
-    }
+    var weather: Variable<Weather?> = Variable(nil)
+    var geo: Variable<Geo?> = Variable(nil)
+    var photos: Variable<[Photos]?> = Variable(nil)
+    var venues: Variable<[Venue]?> = Variable(nil)
     
     init() {
 //        self.performGeoRequest()
@@ -37,18 +31,18 @@ class ViewControllerViewModel {
         }
         
         self.socket.on("geo") { data, ack in
-            print("data : \(data)")
-            self.weather.value = Weather(data: data) as? DataCell
+            self.geo.value = Geo(data: data)
         }
         self.socket.on("venues") {data, ack in
             print("data venues : \(data)")
+            self.venues.value = Venue.initPhotos(data)
             //            print("venues : \(data)")
         }
         self.socket.on("instagram") {data, ack in
-            //            print("images : \(data)")
+            self.photos.value = Photos.initPhotos(data)
         }
         self.socket.on("weather") {data, ack in
-            //            print("weather : \(data)")
+            self.weather.value = Weather(data: data)
         }
         self.socket.connect()
     }

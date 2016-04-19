@@ -16,10 +16,12 @@ struct Weather: DataCell {
     var identifier = "weather"
     
     init?(data: [AnyObject]) {
-        guard let geoString = data.first as? String, let geo = geoString.convertToArray() else {
+        guard let geoString = data.first as? String, let geo = geoString.convertToDictionary() else {
             return nil
         }
-        self.descriptionWeather = geo[0] as? String
-        self.temp = geo[1] as? String        
+        self.descriptionWeather = geo["summary"] as? String
+        if let temp = geo["temperature"] as? Double {
+            self.temp = "\(temp)"
+        }
     }
 }

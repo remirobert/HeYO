@@ -7,11 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BB32573E1CC639AE00D78623 /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB32573D1CC639AE00D78623 /* WeatherViewController.swift */; };
+		BB3257401CC63E0100D78623 /* Geo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB32573F1CC63E0100D78623 /* Geo.swift */; };
+		BB3257421CC63F6200D78623 /* GeoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3257411CC63F6200D78623 /* GeoViewController.swift */; };
+		BB3257451CC6404D00D78623 /* PhotosCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3257431CC6404D00D78623 /* PhotosCollectionViewCell.swift */; };
+		BB3257461CC6404D00D78623 /* PhotosCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB3257441CC6404D00D78623 /* PhotosCollectionViewCell.xib */; };
+		BB3257481CC6409100D78623 /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3257471CC6409100D78623 /* PhotosViewController.swift */; };
+		BB32574A1CC640E500D78623 /* Photos.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3257491CC640E500D78623 /* Photos.swift */; };
+		BB32574C1CC64B5A00D78623 /* VenuesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB32574B1CC64B5A00D78623 /* VenuesViewController.swift */; };
 		BB3B28B81CC3B0F7002DA8C8 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3B28B71CC3B0F7002DA8C8 /* Network.swift */; };
 		BB3B28BA1CC3B0FF002DA8C8 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3B28B91CC3B0FF002DA8C8 /* API.swift */; };
 		BB3B28BC1CC47C12002DA8C8 /* Venue.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3B28BB1CC47C12002DA8C8 /* Venue.swift */; };
-		BB3B28BF1CC48E6D002DA8C8 /* WeatherTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3B28BD1CC48E6D002DA8C8 /* WeatherTableViewCell.swift */; };
-		BB3B28C01CC48E6D002DA8C8 /* WeatherTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB3B28BE1CC48E6D002DA8C8 /* WeatherTableViewCell.xib */; };
 		BBD168C11CC0B72B007B25B8 /* ViewControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD168C01CC0B72B007B25B8 /* ViewControllerViewModel.swift */; };
 		BBD168C31CC0B983007B25B8 /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD168C21CC0B983007B25B8 /* DataSource.swift */; };
 		BBD978DF1CBFC16D001953B0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD978DE1CBFC16D001953B0 /* AppDelegate.swift */; };
@@ -26,11 +32,17 @@
 
 /* Begin PBXFileReference section */
 		657826EA2DF890F5206ED756 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		BB32573D1CC639AE00D78623 /* WeatherViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
+		BB32573F1CC63E0100D78623 /* Geo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Geo.swift; sourceTree = "<group>"; };
+		BB3257411CC63F6200D78623 /* GeoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeoViewController.swift; sourceTree = "<group>"; };
+		BB3257431CC6404D00D78623 /* PhotosCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotosCollectionViewCell.swift; sourceTree = "<group>"; };
+		BB3257441CC6404D00D78623 /* PhotosCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhotosCollectionViewCell.xib; sourceTree = "<group>"; };
+		BB3257471CC6409100D78623 /* PhotosViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotosViewController.swift; sourceTree = "<group>"; };
+		BB3257491CC640E500D78623 /* Photos.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Photos.swift; sourceTree = "<group>"; };
+		BB32574B1CC64B5A00D78623 /* VenuesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VenuesViewController.swift; sourceTree = "<group>"; };
 		BB3B28B71CC3B0F7002DA8C8 /* Network.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		BB3B28B91CC3B0FF002DA8C8 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		BB3B28BB1CC47C12002DA8C8 /* Venue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Venue.swift; sourceTree = "<group>"; };
-		BB3B28BD1CC48E6D002DA8C8 /* WeatherTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherTableViewCell.swift; sourceTree = "<group>"; };
-		BB3B28BE1CC48E6D002DA8C8 /* WeatherTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WeatherTableViewCell.xib; sourceTree = "<group>"; };
 		BBD168C01CC0B72B007B25B8 /* ViewControllerViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerViewModel.swift; sourceTree = "<group>"; };
 		BBD168C21CC0B983007B25B8 /* DataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
 		BBD978DB1CBFC16D001953B0 /* App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = App.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -61,8 +73,8 @@
 		BBD168BB1CC098D2007B25B8 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				BB3B28BD1CC48E6D002DA8C8 /* WeatherTableViewCell.swift */,
-				BB3B28BE1CC48E6D002DA8C8 /* WeatherTableViewCell.xib */,
+				BB3257431CC6404D00D78623 /* PhotosCollectionViewCell.swift */,
+				BB3257441CC6404D00D78623 /* PhotosCollectionViewCell.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -96,6 +108,10 @@
 				BBF72AD41CC0CA10001C1CA1 /* DataExtension.swift */,
 				BBD978E01CBFC16D001953B0 /* ViewController.swift */,
 				BBD168C01CC0B72B007B25B8 /* ViewControllerViewModel.swift */,
+				BB32573D1CC639AE00D78623 /* WeatherViewController.swift */,
+				BB32574B1CC64B5A00D78623 /* VenuesViewController.swift */,
+				BB3257411CC63F6200D78623 /* GeoViewController.swift */,
+				BB3257471CC6409100D78623 /* PhotosViewController.swift */,
 				BBD168C21CC0B983007B25B8 /* DataSource.swift */,
 				BBD978E21CBFC16D001953B0 /* Main.storyboard */,
 				BBD978E51CBFC16D001953B0 /* Assets.xcassets */,
@@ -110,6 +126,8 @@
 			children = (
 				BBF72AD21CC0C5FA001C1CA1 /* Weather.swift */,
 				BB3B28BB1CC47C12002DA8C8 /* Venue.swift */,
+				BB32573F1CC63E0100D78623 /* Geo.swift */,
+				BB3257491CC640E500D78623 /* Photos.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -193,7 +211,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BBD978E91CBFC16D001953B0 /* LaunchScreen.storyboard in Resources */,
-				BB3B28C01CC48E6D002DA8C8 /* WeatherTableViewCell.xib in Resources */,
+				BB3257461CC6404D00D78623 /* PhotosCollectionViewCell.xib in Resources */,
 				BBD978E61CBFC16D001953B0 /* Assets.xcassets in Resources */,
 				BBD978E41CBFC16D001953B0 /* Main.storyboard in Resources */,
 			);
@@ -255,13 +273,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				BB3B28BC1CC47C12002DA8C8 /* Venue.swift in Sources */,
-				BB3B28BF1CC48E6D002DA8C8 /* WeatherTableViewCell.swift in Sources */,
+				BB32573E1CC639AE00D78623 /* WeatherViewController.swift in Sources */,
 				BBD978E11CBFC16D001953B0 /* ViewController.swift in Sources */,
+				BB32574A1CC640E500D78623 /* Photos.swift in Sources */,
 				BB3B28B81CC3B0F7002DA8C8 /* Network.swift in Sources */,
+				BB3257451CC6404D00D78623 /* PhotosCollectionViewCell.swift in Sources */,
 				BBD978DF1CBFC16D001953B0 /* AppDelegate.swift in Sources */,
 				BBD168C31CC0B983007B25B8 /* DataSource.swift in Sources */,
 				BBF72AD51CC0CA10001C1CA1 /* DataExtension.swift in Sources */,
+				BB3257401CC63E0100D78623 /* Geo.swift in Sources */,
+				BB32574C1CC64B5A00D78623 /* VenuesViewController.swift in Sources */,
+				BB3257421CC63F6200D78623 /* GeoViewController.swift in Sources */,
 				BBF72AD31CC0C5FA001C1CA1 /* Weather.swift in Sources */,
+				BB3257481CC6409100D78623 /* PhotosViewController.swift in Sources */,
 				BB3B28BA1CC3B0FF002DA8C8 /* API.swift in Sources */,
 				BBD168C11CC0B72B007B25B8 /* ViewControllerViewModel.swift in Sources */,
 			);

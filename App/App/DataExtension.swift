@@ -10,6 +10,17 @@ import UIKit
 
 extension String {
     
+    func convertToDictionary() -> JSON? {
+        if let data = self.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false) {
+            do {
+                return try NSJSONSerialization.JSONObjectWithData(data, options: []) as? [String:AnyObject]
+            } catch let error as NSError {
+                print(error)
+            }
+        }
+        return nil
+    }
+    
     func convertToArray() -> [AnyObject]? {
         if let data = self.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false) {
             do {

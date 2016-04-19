@@ -8,3 +8,5 @@ pod 'RxBlocking', '~> 2.0.0-beta.4'
 pod 'Socket.IO-Client-Swift'
 pod 'DynamicColor'
 pod 'Alamofire'
+
+pod 'PINRemoteImage'
